@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                ruby -v
+                sh 'ruby -v'
             }
         }
     }
