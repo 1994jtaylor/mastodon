@@ -10,9 +10,11 @@ pipeline {
     }
 
     stages {
-        stage('Hello') {
+        stage('Lint') {
             steps {
-                sh 'ruby -v'
+                sh 'bundle install'
+                sh 'bin/rubocop'
+                sh 'bin/brakeman'
             }
         }
     }
